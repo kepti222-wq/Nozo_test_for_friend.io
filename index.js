@@ -60,7 +60,7 @@ app.get('/product/:article', (req, res) => {
 app.get ('/error', (req, res) => {
     res.render('error')
 })
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
     console.log(`server started: http://localhost:${PORT}`)
