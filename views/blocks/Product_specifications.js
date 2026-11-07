@@ -33,10 +33,10 @@ const Product_specifications = {
        {name:'фембой',value:'может быть',}
      ],
         '59384726' : [
-       {name: 'масса', value: '999999',},
-       {name: 'длинна', value: '0,00000001',},
+       {name: 'масса', value: '52',},
+       {name: 'длинна', value: '>167cm',},
        {name:'гарантия',value:'1 год'},
-       {name:'фембой',value:'наверное',}
+       {name:'фембой',value:'абсолютно',}
      ],
 
      '60493827' : [
@@ -45,7 +45,13 @@ const Product_specifications = {
        {name:'гарантия',value:'1 год'},
        {name:'фембой',value:'наверное',}
      ],
-     
+
+     '82615049' : [
+      {name: 'масса', value: 'многа',},
+       {name: 'длинна', value: 'немаленькая',},
+       {name:'гарантия',value:'1 год'},
+       {name:'фембой',value:'наверное?',}
+     ],
 };
 
 module.exports = Product_specifications;

@@ -48,7 +48,7 @@ const products = [
 
         { 
         id: 5 ,
-        name: 'игрушка р1 из KOLABA PREVISHE SVO,27cm ',
+        name: 'игрушка V1 из KOLABA PREVISHE SVO,27cm ',
         link: '/',
         sale_Price:'6 987',
         price:'7 376',
@@ -58,23 +58,94 @@ const products = [
 
         { 
         id: 6 ,
-        name: 'zhucnannnnn',
+        name: 'шоколадный фембой баунти 67',
         link: '/',
-        sale_Price:'1 987',
-        price:'2 376',
+        sale_Price:'1 967',
+        price:'2 367',
         article: '59384726',
-        logo: '/img/product_logo/placeholder.png',
+        logo: '/img/product_logo/baunty.png',
         },
 
         { 
         id: 7 ,
+        name: 'тут когда то будет блорк :P',
+        link: '/',
+        sale_Price:'1234',
+        price:'4 321',
+        article: '82615049',
+        logo: '/img/product_logo/blork.png',
+        },
+
+         { 
+        id: 8 ,
         name: 'zhucnannnnnnnnnnnnn',
         link: '/',
         sale_Price:'1 9827',
         price:'2 3276',
         article: '60493827',
         logo: '/img/product_logo/placeholder.png',
-        }
+        },
+
+        { 
+        id: 9 ,
+        name: 'zhucnannnnnnnnnnnnn',
+        link: '/',
+        sale_Price:'1 9827',
+        price:'2 3276',
+        article: '60493827',
+        logo: '/img/product_logo/placeholder.png',
+        },
+
+        { 
+        id: 10 ,
+        name: 'zhucnannnnnnnnnnnnn',
+        link: '/',
+        sale_Price:'1 9827',
+        price:'2 3276',
+        article: '60493827',
+        logo: '/img/product_logo/placeholder.png',
+        },
+
+        { 
+        id: 10 ,
+        name: 'zhucnannnnnnnnnnnnn',
+        link: '/',
+        sale_Price:'1 9827',
+        price:'2 3276',
+        article: '60493827',
+        logo: '/img/product_logo/placeholder.png',
+        },
+
+        { 
+        id: 10 ,
+        name: 'zhucnannnnnnnnnnnnn',
+        link: '/',
+        sale_Price:'1 9827',
+        price:'2 3276',
+        article: '60493827',
+        logo: '/img/product_logo/placeholder.png',
+        },
+
+        { 
+        id: 10 ,
+        name: 'zhucnannnnnnnnnnnnn',
+        link: '/',
+        sale_Price:'1 9827',
+        price:'2 3276',
+        article: '60493827',
+        logo: '/img/product_logo/placeholder.png',
+        },
+
+        { 
+        id: 10 ,
+        name: 'zhucnannnnnnnnnnnnn',
+        link: '/',
+        sale_Price:'1 9827',
+        price:'2 3276',
+        article: '60493827',
+        logo: '/img/product_logo/placeholder.png',
+        },
+
     ];
 // мяу когда нить я буду крутым програмисмистиком но пока что я просто копирую сраный код с дипсика XDDD
  class Products extends React.Component {

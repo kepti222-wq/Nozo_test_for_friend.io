@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOZO - избранное</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<%- include ('blocks/header.ejs') -%>
+
+<div class="favorites-container">
+    <h1 class="cart-title">Избранное</h1>
+    
+
+    <div id="favoritesList" class="products-grid">
+            
+        </div>
+</div>
+
+<script>
+     window.allProducts = <%- JSON.stringify(products) %>; //тут показывает ошибочки потому что глупый вс код не воспринимает EJS прекольчики в скриптах XDD
+</script>
+
+    <script src="/js/cart.js"></script>
+    <script src="/js/favorites.js"></script>
+
+</body>
+</html>

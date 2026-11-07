@@ -18,15 +18,61 @@ app.get ('/', (req, res) => {
     
     });
    
-})
+});
 
 app.get ('/cart', (req, res) => {
     res.render('cart')
-})
+});
+
+app.get ('/user', (req, res) => {
+    res.render('user')
+});
+
+app.get('/favorites', (req, res) => {
+    res.render('favorites', { 
+        pageTitle: 'Избранное - NOZO',
+        products: products 
+    });
+});
+
 
 app.get ('/orderlist', (req, res) => {
     res.render('orderlist')
-})
+});
+
+app.get('/chuvak', (req, res) => {
+    res.render('chuvak');
+});
+
+app.get ('/error', (req, res) => {
+    res.render('error')
+});
+
+app.get ('/error_buy', (req, res) => {
+    res.render('error_buy')
+});
+
+app.get('/about', (req, res) => {
+    res.render('about');
+});
+
+app.get('/search', (req, res) => {
+    const querty = (req.query.q || '').toLowerCase().trim();
+    let searchResults = [];
+
+    if (querty) {
+        searchResults = products.filter(product =>
+            product.name.toLowerCase().includes(querty) 
+        );
+    }
+
+    res.render('search', {
+        pageTitle: 'Поиск на Nozo',
+        query: req.query.q || '',
+        searchResults: searchResults,
+    });
+});
+
 
 app.get('/product/:article', (req, res) => {
   const article = req.params.article;
@@ -57,9 +103,6 @@ app.get('/product/:article', (req, res) => {
 });
 
 
-app.get ('/error', (req, res) => {
-    res.render('error')
-})
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {

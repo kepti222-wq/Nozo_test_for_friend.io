@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <%- include('blocks/header.ejs') %>
+
+    <div class="search-page-layout">  
+
+        <aside class="search-sidebar">
+          <h3>Фильтры</h3>
+          <p style="color: #89929c; font-size: 14px; margin-top: 10px;" тут когда то что то будет XDDD> </p>
+        </aside>
+
+        <main class="search-content">
+            <h2 class="search-title">
+                <% if (query) { %>
+                    Результаты поиска по запросу: "<%= query %>"
+                <% } else { %>
+                    Введите что-нибудь в поиск
+                <% } %>
+            </h2>
+
+            <% if (query && searchResults.length === 0) { %>
+                <div class="cart-empty">
+                    По вашему запросу "<%= query %>" ничего не найдено :<  
+                </div>
+            <% } %>
+
+                      <% if (searchResults.length > 0) { %>
+                <div class="products-grid">
+                    <% searchResults.forEach(product => { %>
+                        <a href="/product/<%= product.article %>" class="product-card-link">
+                            <div class="product-card">
+                                <img src="<%= product.logo %>" alt="<%= product.name %>" class="product-image">
+                                <h3 class="product-name"><%= product.name %></h3>
+                                <div class="product-prices">
+                                    <% if (product.sale_Price && parseInt(product.sale_Price.replace(/\s/g, '')) < parseInt(product.price.replace(/\s/g, ''))) { %>
+                                        <div class="prices-with-discount">
+                                            <span class="sale-price"><%= product.sale_Price %> ₽</span>
+                                            <span class="old-price"><%= product.price %> ₽</span>
+                                        </div>
+                                    <% } else { %>
+                                        <span class="regular-price"><%= product.price %> ₽</span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </a>
+                    <% }) %>
+                </div>
+            <% } %>
+        </main>
+    </div> 
+</body>
+</html>

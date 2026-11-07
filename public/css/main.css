@@ -940,9 +940,10 @@ border-radius: 8px;
  
 }
 
-.error_alert h1 {
-  position: absolute;
-  top: 90px;
+.chuvak_image {
+  height: 250px;
+  width: 450px;
+   border-radius: 20px;
 }
 
 .error_alert h2{
@@ -973,6 +974,86 @@ color: #0059ff;
   width: auto;
 }
 
+/*  СТРАНИЦА ПОИСКА */
+.search-page-layout {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    align-items: flex-start;
+}
 
 
+.search-sidebar {
+    flex: 0 0 250px; 
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    min-height: 400px;
+}
+
+
+.search-content {
+    flex: 1; 
+}
+
+.search-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+
+@media (max-width: 768px) {
+    .search-page-layout {
+        flex-direction: column;
+    }
+    .search-sidebar {
+        flex: 1 1 auto;
+        width: 100%;
+        min-height: auto;
+    }
+}
+
+/* избранное */
+
+.favorites-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* У карточки уже есть position: relative, но на всякий случай */
+.favorites-container .product-card {
+  position: relative;
+}
+
+/* Кнопка сердечка поверх карточки */
+.fav-remove-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f0117e; /* Розовый цвет */
+  font-size: 16px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.fav-remove-btn:hover {
+  transform: scale(1.1);
+  background: #ffe6f0;
+}
 
